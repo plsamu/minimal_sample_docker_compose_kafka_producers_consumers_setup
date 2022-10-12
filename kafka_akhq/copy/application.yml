@@ -1,0 +1,12 @@
+akhq:
+  connections:
+    local:
+      properties:
+        bootstrap.servers: "localhost:9092"
+
+security:
+  groups:
+    topic1-reader: # unique key
+      name: topic1-reader # Other group
+      roles:
+        - topic/read
