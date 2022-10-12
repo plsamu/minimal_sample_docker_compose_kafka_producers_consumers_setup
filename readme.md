@@ -19,6 +19,23 @@ mv akhq.jar ./kafka_akhq/copy/
 | 4                | mongodb      |
 | 5                | backend      |
 
+## Start
+
+To start everything use the launch.bat, or these commands:
+
+```bash
+mvn -f consumers/pom.xml install &&
+mvn -f backend/pom.xml install &&
+docker compose up
+```
+
+I like to build on host without use docker stage.
+
+## TODO
+
+[ ] backend dockerfile
+[ ] backend mongodb connection using default docker network
+
 ## Remember
 
 ### utils commands
