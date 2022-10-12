@@ -19,6 +19,22 @@ mv akhq.jar ./kafka_akhq/copy/
 | 4                | mongodb      |
 | 5                | backend      |
 
+#### Kafka IP
+
+Kafka IP is the name of the service in the `docker-compose.yml` resolved by docker default network. Try:
+
+```
+ping kafka_akhq
+```
+
+#### Consumer Groups ID
+
+Consumer Groups ID are configured in the `application.yml` of akhq.
+
+#### MongoDB
+
+MongoDB is configured all inside the `docker-compose.yml`.
+
 ## Start
 
 To start everything use the launch.bat, or these commands:
@@ -31,10 +47,21 @@ docker compose up
 
 I like to build on host without use docker stage.
 
-## TODO
+Then go to:
 
+```
+localhost:8081
+```
+
+And create a topic named `topic1`.
+
+## TODO (won't do this)
+
+```
 [ ] backend dockerfile
 [ ] backend mongodb connection using default docker network
+[ ] backend JPA / Mongodb
+```
 
 ## Remember
 
